@@ -8,5 +8,22 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.log(err));
+if (customElements.get('app-first-component')) {
+   console.error('First Component already defined -> nothing to do...');
+} else {
+   platformBrowserDynamic().bootstrapModule(AppModule)
+      .catch(err => console.log(err)); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
